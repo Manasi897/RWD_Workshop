@@ -1,0 +1,116 @@
+.container {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 0.4fr 1.5fr 1.2fr 0.8fr 0.5fr;
+  grid-template-areas:
+    "nav nav nav nav nav nav"
+    "main1 main1 main1 main2 main2 main2"
+    "content1  content1 content2 content2 content3 content3"
+    "content4 content4 content4 content4 content5 content5"
+    "footer footer footer footer footer footer";
+  grid-gap: 0.9rem;
+  /* text-align: center; */
+}
+#logo{
+  float: left;
+  font-family: sans-serif;
+}
+nav {
+  background: pink;
+  grid-area: nav;
+  float: right;
+  text-align: right;
+}
+a{
+  display: inline-block;
+    color: black;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+#main1 {
+  grid-area: main1;
+}
+#main2 {
+  grid-area: main2;
+}
+
+#content1 {
+  background: wheat;
+  padding-left: 10px;
+  padding-bottom: 10px;
+  padding-right: 10px;
+  grid-area: content1;
+  grid-template-columns: 0.5fr;
+}
+#content2 {
+  background: wheat;
+  padding-left: 10px;
+  padding-bottom: 10px;
+  padding-right: 10px;
+  grid-area: content2;
+}
+#content3 {
+  background: wheat;
+  padding-left: 10px;
+  padding-bottom: 10px;
+  grid-area: content3;
+  padding-right: 10px;
+}
+#content4 {
+  background: skyblue;
+  grid-area: content4;
+  padding-left: 10px;
+  padding-bottom: 10px;
+  padding-right: 10px;
+}
+#content5 {
+  background: skyblue;
+  grid-area: content5;
+}
+footer {
+  background: pink;
+  grid-area: footer;
+  text-align: center;
+}
+img{
+  width: 100%;
+  height: 300px;
+  display: block; 
+}
+.btn{
+  margin-top: 80px;
+  margin-left: 140px;
+}
+
+@media only screen and (max-width:550px){
+  .container{
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.4fr 0.4fr 0.4fr 2.2fr 1.2fr 1.2fr 1.2fr 1fr 1fr;
+    grid-template-areas: "nav"
+    "main1"
+    "main2"
+    "content1"
+    "content2"
+    "content3"
+    "content4"
+    "content5"
+    "footer";
+  }
+}
+
+@media only screen and (max-width:768px){
+  .container{
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.4fr 0.4fr 0.4fr 2.2fr 1.2fr 1.2fr 1.2fr 1fr 1fr;
+    grid-template-areas: "nav"
+    "main1"
+    "main2"
+    "content1"
+    "content2"
+    "content3"
+    "content4"
+    "content5"
+    "footer";
+  }
+}
